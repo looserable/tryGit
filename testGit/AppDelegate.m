@@ -19,11 +19,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [[UINavigationBar appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0],NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     ViewController * viewController = [[ViewController alloc]init];
     
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:viewController];
     self.window.rootViewController = nav;
+    
+//    [nav.navigationBar setBackgroundColor:[UIColor purpleColor]];
     
     [self.window makeKeyAndVisible];
     
